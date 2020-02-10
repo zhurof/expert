@@ -1,0 +1,230 @@
+﻿$green: #4D9757
+$text: #494949
+=placeholder($color)
+	&::-webkit-input-placeholder 
+		color: $color
+	&::-moz-placeholder 
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+		
+=pos
+	display: block
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	
+=obj
+	object-fit: cover
+	object-position: center
+
+=unlist
+	list-style: none
+	margin: 0
+	padding: 0
+
+html
+	box-sizing: border-box
+
+*,:before,:after
+	box-sizing: inherit
+	flex: 0 1 auto
+
+body
+	margin: 0
+	padding: 0 0 0 152px
+	min-height: 100vh
+	min-height: var(--w-height)
+	font: normal normal 16px/1.3125 Ubuntu, sans-serif
+
+img,
+iframe,
+video
+	max-width: 100%
+	user-select: none
+
+a img
+	border: none
+a
+	color: $green
+	text-decoration: none
+
+p
+	margin: 0 0 15/16*1
+	&:last-child
+		margin: 0
+
+*:focus
+	outline: none
+
+*:invalid
+	box-shadow: none
+
+/*элементы форм*/
+input,textarea,button,select
+	font: inherit
+	color: inherit	
+	
+textarea
+	resize: none
+	overflow: auto
+	
+//select
+	appearance: none
+	padding: 10.5px 40px 10.5px 20px
+	background: url(../img/icons/angle.svg) no-repeat right 19px center/11px auto
+	&::-ms-expand
+		display: none
+		
+//[type=search]
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration
+		display: none
+		
+//[type=number]
+	-moz-appearance: textfield
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button
+		appearance: none
+		margin: 0
+		
+.field
+	display: block
+	position: relative
+	user-select: none
+	text-align: left
+	margin: 0 0 15px
+	&:last-child
+		margin-bottom: 0
+	&__input,
+	&__select
+		margin: 0
+	&__placeholder
+		font-size: 16px
+		color: #000
+		line-height: normal
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		position: absolute
+		top: 21px
+		left: 25px
+		width: calc(100% - 50px)
+		transition: all .2s ease
+		pointer-events: none
+	&__input:focus + &__placeholder,
+	&--fill &__placeholder
+		font-size: 11px
+		top: 4px
+	&__description
+		display: block
+		font-size: 14px
+		line-height: normal
+		color: #ADADAD
+		padding: 4px 25px
+		
+/*кнопки*/
+button,
+[type=submit],
+[type=reset],
+[type=image]
+	cursor: pointer
+.btn
+	appearance: none
+	display: inline-block
+	vertical-align: top
+	background: linear-gradient(180deg, #E2CA71 0%, #C6A238 100%)
+	font: normal bold 16px/1.5 Ubuntu, sans-serif
+	padding: 24px 50px
+	color: #fff
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.246449)
+	text-transform: uppercase
+	border-radius: 100px
+	text-align: center
+	user-select: none
+	box-shadow: 0px 3px 0px #967B12
+	&--small
+		background: #51B05E
+		padding: 5px 13px
+		border-radius: 4px
+		font-weight: 400
+		text-transform: none
+		text-shadow: none
+		box-shadow: none
+		font-size: 14px
+	&--block
+		display: block
+		width: 100%
+		padding-left: 7px
+		padding-right: 7px
+
+/*заголовки*/
+h1,h2,h3,h4,h5,h6
+	margin: 0 0 1em	
+h1,h2
+	font-family: Oswald,sans-serif
+	font-weight: 300
+	font-size: 42px
+	b,strong
+		font-weight: inherit
+		color: $green
+h1
+	line-height: 68/42*1
+	margin: 0 0 20/42*1em
+	&:last-child
+		margin-bottom: 0
+h2
+	line-height: 58/42*1
+	margin: 0 0 16/42*1em
+	&:last-child
+		margin-bottom: 0
+h4
+	font-size: 20px
+	line-height: 1.3
+	font-weight: inherit
+	margin: 0 0 17/20*1em
+	&:last-child
+		margin-bottom: 0
+
+/*списки*/
+ul,ol
+	margin: 0 0 1em
+		
+/*таблицы*/
+/*контейнеры*/
+.wrapper
+	max-width: 1215px
+	padding: 0 65px
+
+/*ОСНОВНОЕ СОДЕРЖИМОЕ*/
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 152px
+	height: 100%
+.top-block
+	min-height: 100vh
+	min-height: var(--w-height)
+	padding: 100px 0
+	background: 
+		size: cover
+		position: center
+		repeat: no-repeat
+	display: flex
+	flex-direction: column
+	color: #fff	
+	&__wrapper
+		width: 100%
+		margin: auto 0
+	&__text
+		max-width: 680px
+		h1
+			text-transform: uppercase
+
+/*АДАПТИВ*/
+@import "adaptive"
