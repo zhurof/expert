@@ -12,6 +12,7 @@
 <body>
 	<header class="header">
 		<a href="/" class="logo header__logo"><img src="img/logo.png" alt=""></a>
+		<a href="tel:+79211234567" class="header__phone header__phone--mobile">+7 921 123-45-67</a>
 		<ul class="header__menu">
 			<li><a href="#">Услуги</a></li>
 			<li><a href="#">Команда</a></li>
@@ -24,7 +25,11 @@
 			<div class="header__status">Сейчас работаем</div>
 			<a href="#" class="btn btn--small">Обратный звонок</a>
 		</div>
-		
+		<div class="header__auth">
+			<i class="far fa-door-open header__auth-icon"></i>
+			<h3 class="header__auth-title">Личный кабинет</h3>
+			<a href="#">Получить логин и пароль</a>
+		</div>
 	</header>
 	<main>		
 		<div class="top-block" style="background-image:url(../img/top.png)">
@@ -38,7 +43,7 @@
 				</div>
 				<div class="top-block__footer">
 					<a href="#" class="btn top-block__btn">Получить бесплатную консультацию</a>
-					<p><i class="far fa-bell" style="color:#DFC66D"></i> Это займет не больше 5-ти минут</p>
+					<p><i class="far fa-lg fa-bell" style="color:#DFC66D">&nbsp;</i> Это займет не больше 5-ти минут</p>
 				</div>
 				<a href="#" class="link-banner top-block__banner">
 					<img class="link-banner__img" src="img/laptop.png" alt="">
@@ -46,8 +51,156 @@
 				</a>
 			</div>
 		</div>
+		<div class="services">
+			<div class="wrapper">
+				<div class="services__head">
+					<h2 style="text-align:center;"><b>Наши услуги</b></h2>
+				</div>
+				<div class="box services__box">					
+					<div class="service-card">
+						<a href="#" class="service-card__link"></a>
+						<img src="img/clipboard.png" alt="" class="service-card__img">
+						<div class="service-card__text">
+							<div class="service-card__content">
+								<h4>Негосударственная экспертиза проектной документации </h4>
+								<p>Проверим соответствие проектной документации результатам инженерных изысканий, требованиям нормативно-технических документов и техническим регламентам</p>
+							</div>
+							<span class="service-card__pseudo-link">Список необходимых документов</span>
+						</div>
+					</div>
+					<div class="service-card">
+						<a href="#" class="service-card__link"></a>
+						<img src="img/device.png" alt="" class="service-card__img">
+						<div class="service-card__text">
+							<div class="service-card__content">
+								<h4>Негосударственная экспертиза результатов инженерных изысканий</h4>
+								<p>Проанализируем документы, составим свое экспертное заключение</p>
+							</div>
+							<span class="service-card__pseudo-link">Подробнее об услуге</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about">
+			<div class="wrapper about__wrapper">
+				<img src="img/docs.png" alt="" class="about__img">
+				<div class="about__text">
+					<h2><b>Для чего нужна</b> экспертиза проектной документации?</h2>
+					<p>Чаще всего экспертиза нужна для получения разрешения на строительство. Государственные органы требуют ее перед тем как согласовать проект, чтобы убедиться в квалификации подрядчика.</p>
+					<blockquote>Экспертиза дает возможность найти и устранить нарушения до того, как начнется строительтво.</blockquote>
+				</div>
+			</div>
+		</div>
+		<div class="info">
+			<div class="wrapper info__wrapper">
+				<div class="info__text">
+					<h2><b>Чем отличаются</b> частная и государственная экспертизы?</h2>
+					<p>Юридически ничем. Согласно ФЗ № 337 от 28.11.2011 г. частная экспертиза имеет равную силу с государственной.</p>
+					<p>Фактически, частные эксперты, развиваясь в высококонкурентной среде, вынуждены лучше прорабатывать все процессы своей работы, чтобы помочь строителям быстрее получать нужные им услуги, на более гибких условиях.</p>
+					<h4>Наши преимущества перед государственной экспертизой:</h4>
+					<div class="infographics">
+						<div class="infographics__item">
+							<img src="img/" alt="" class="infographics__img">
+							<div class="infographics__text">делаем проекты от 7 дней</div>
+						</div>
+					</div>
+				</div>
+				<img src="img/codex.png" alt="" class="info__img">
+			</div>
+		</div>
+		<div class="contacts">
+			<div class="contacts__map" id="map" data-coords="59.959197,30.314557" data-center="59.959197,30.310557"></div>
+			<div class="wrapper contacts__wrapper">
+				<div class="contacts__text">
+					<h2 class="contacts__title">Контакты</h2>
+					<div class="contacts__body">
+						<div class="contacts__item">
+							<i class="fal fa-map-marker-alt contacts__item-icon"></i>
+							<div class="contacts__item-text">
+								<h4 class="contacts__item-title">Адрес</h4>
+								<p>г. Воронеж, Московский пр-т.,  <br>д.97 оф. 79</p>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<i class="fal fa-phone contacts__item-icon"></i>
+							<div class="contacts__item-text">
+								<h4 class="contacts__item-title">Телефон</h4>
+								<p><a href="tel:+74732023239">+7 (473) 202 32 39</a></p>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<i class="fal fa-envelope contacts__item-icon"></i>
+							<div class="contacts__item-text">
+								<h4 class="contacts__item-title">Электронная почта:</h4>
+								<p><a href="mailto:info@exproekt.com">info@exproekt.com</a></p>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<i class="fal fa-arrow-to-bottom contacts__item-icon"></i>
+							<div class="contacts__item-text">
+								<p><a href="document.pdf" target="_blank">Скачать реквизиты компании</a></p>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="btn contacts__btn">Задать вопрос</a>
+				</div>
+			</div>
+		</div>
+		<div class="advantages">
+			<div class="wrapper advantages__wrapper">
+				<div class="advantages__inner">
+					<div class="box advantages__box">
+						<div class="advantages__item">
+							<div class="advantages__item-pic">
+								<img src="img/icons/shield.svg" alt="">
+							</div>
+							<div class="advantages__item-text">Гарантия на все работы</div>
+						</div>
+						<div class="advantages__item">
+							<div class="advantages__item-pic">
+								<img src="img/icons/stopwatch.svg" alt="">
+							</div>
+							<div class="advantages__item-text">Результаты <br>от 7-ми дней</div>
+						</div>
+						<div class="advantages__item">
+							<div class="advantages__item-pic">
+								<img src="img/icons/paper-plane.svg" alt="">
+							</div>
+							<div class="advantages__item-text">По всей России</div>
+						</div>
+						<div class="advantages__item">
+							<div class="advantages__item-pic">
+								<img src="img/icons/headphones.svg" alt="">
+							</div>
+							<div class="advantages__item-text">Бесплатная консультация</div>
+						</div>
+						<div class="advantages__item">
+							<div class="advantages__item-pic">
+								<img src="img/icons/laptop.svg" alt="">
+							</div>
+							<div class="advantages__item-text">Удаленная работа через личный кабинет</div>
+						</div>
+						<div class="advantages__item">
+							<div class="advantages__item-pic">
+								<img src="img/icons/letter.svg" alt="">
+							</div>
+							<div class="advantages__item-text">Прямая связь с экспертами</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
-	<footer class="footer"></footer>
+	<footer class="footer">
+		<div class="wrapper footer__wrapper">
+			<a href="tel:+79211234556" class="footer__phone">+7 921 123-45-56</a>
+			<a href="#" class="btn btn--thin footer__btn">Обратный звонок</a>
+			<div class="footer__text">
+				<p>© 2020 ЭкспертПроект <a href="#">Политика конфиденциальности</a>, <br>ИНН 123123123, ОГРН 12312983981273</p>
+			</div>
+		</div>
+	</footer>
 	<script src="libs/jquery/jquery-3.4.1.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="js/script.js"></script>	
