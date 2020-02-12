@@ -165,7 +165,7 @@ button,
 	display: inline-block
 	vertical-align: top
 	background: linear-gradient(180deg, #E2CA71 0%, #C6A238 100%)
-	font: normal bold 16px/1.5 Ubuntu, sans-serif
+	font: normal 500 16px/1.5 Ubuntu, sans-serif
 	padding: 24px 50px
 	color: #fff
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.246449)
@@ -190,6 +190,9 @@ button,
 		padding: 12px 35px
 		box-shadow: none
 		font-size: 14px
+	&--white
+		color: #fff
+		border-color: #fff
 	&--block
 		display: block
 		width: 100%
@@ -204,6 +207,17 @@ button,
 			font-weight: 400
 			color: $green
 			vertical-align: text-top
+			margin-right: 12/19*1em
+			margin-left: -5/19*1em
+	&--envelope
+		&:before
+			content: ''
+			font-family: "Font Awesome 5 Pro"
+			font-size: 19/14*1em
+			line-height: 19/25*1
+			font-weight: 400
+			color: $green
+			vertical-align: -0.1em
 			margin-right: 12/19*1em
 			margin-left: -5/19*1em
 
@@ -241,6 +255,11 @@ h4
 	margin: 0 0 17/20*1em
 	&:last-child
 		margin-bottom: 0
+h5
+	font-size: 12px
+	line-height: 21/12*1
+	font-weight: inherit
+	margin: 0
 
 /*списки*/
 ul,ol
@@ -436,6 +455,33 @@ ul
 		width: 417px
 		border-bottom-right-radius: 0
 		border-bottom-left-radius: 0
+.info
+	padding: 70px 0
+	margin: 0 0 80px
+	background: linear-gradient(to right,#f9f9f9 calc(50% + 300px),transparent calc(50% + 300px))
+	&:last-child
+		margin-bottom: 0
+	&__wrapper
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+	&__text
+		flex-basis: 540px
+		margin-right: 30px
+	&__img
+		flex-basis: 451px
+.infographics
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -20px
+	&__item
+		width: 240px
+		margin: 0 20px 20px
+		display: flex
+		align-items: center
+		line-height: normal
+	&__img
+		margin: 0 17px 0 0
 .service-card
 	width: calc(50% - 20px)
 	margin: 0 10px 20px
@@ -498,6 +544,171 @@ ul
 			margin: 0 0 14/48*1em
 			&:last-child
 				margin-bottom: 0
+.step-card
+	margin: 0 7px 14px
+	background-color: rgba(255,255,255,.25)
+	position: relative
+	width: 352px
+	padding: 27px 16px 29px 136px
+	border-radius: 5px
+	&--right-image
+		padding-left: 40px
+		padding-right: 112px
+	&__img
+		position: absolute
+		right: 215px
+		top: 50%
+		pointer-events: none
+		transform: translateY(-50%)
+		&--left-bottom
+			bottom: 0
+			top: auto
+			transform: none
+		&--right
+			right: auto
+			left: 197px
+		&--right-bottom
+			left: 195px
+			right: auto
+			top: auto
+			bottom: -32px
+			transform: none
+	&__index
+		font: normal 300 48px/1.21 Oswald,sans-serif
+		margin: 0 0 17/48*1em
+		&:last-child
+			margin-bottom: 0
+	h4
+		font-weight: bold
+		text-transform: uppercase
+		margin: 0 0 7/20*1em
+		&:last-child
+			margin-bottom: 0
+.info-card
+	margin: 0 7px 14px
+	background-color: rgba(255,255,255,.25)
+	position: relative
+	width: 352px
+	padding: 55px 16px 40px
+	border-radius: 5px
+	text-align: center
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 10px
+		left: 10px
+		width: calc(100% - 20px)
+		height: calc(100% - 20px)
+		border: 1px solid rgba(255,255,255,.35)
+		border-radius: inherit
+		pointer-events: none
+.scheme
+	background-color: $green
+	color: #fff
+	padding: 55px 0
+	margin: 0 0 80px
+	&:last-child
+		margin-bottom: 0
+	&__head
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		margin: 0 0 30px
+		&:last-child
+			margin-bottom: 0
+	&__text
+		flex: 0 1 620px
+		padding-right: 10px
+	&__box
+		margin: 0 -7px
+.person-card
+	margin: 0 13px 55px
+	background-color: #fff
+	border-radius: 5px
+	overflow: hidden
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0644121)
+	display: flex
+	color: #282828
+	&__main
+		width: 304px
+		padding: 26px 23px 30px
+		display: flex
+		flex-direction: column
+		h5
+			color: #6a6a6a
+		p
+			margin: 0 0 5/16*1em
+			&:last-child
+				margin-bottom: 0
+	&__text
+		margin: 0 0 46px
+	&__nav
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin: 0 -5px
+	&__trigger
+		display: inline-block
+		color: #6a6a6a
+		font-size: 12px
+		line-height: 1
+		padding: 9px 13px
+		border-radius: 100px
+		cursor: pointer
+		user-select: none
+		margin: 0 0 6px
+		&--active
+			background-color: #eee
+			color: #282828
+	&__btn
+		margin: auto 0 0
+	&__img
+		width: 234px
+		height: 100%
+		+obj
+.team
+	&__inner
+		padding: 57px
+		background: url(../img/brown-circle.svg) no-repeat right -75px top -75px, linear-gradient(to top, transparent 184px,#F9F9F9 184px)
+	&__head
+		margin: 0 0 22px
+		&:last-child
+			margin-bottom: 0
+	&__nav
+		+unlist
+		display: flex
+		align-items: flex-end
+		flex-wrap: wrap
+		justify-content: center
+		font-size: 20px
+		line-height: 1.3
+		margin: 0 0 50px
+		&:last-child
+			margin-bottom: 0
+		>li
+			display: inline-block
+			position: relative
+			padding: 1.1em .75em
+			cursor: pointer
+			user-select: none
+			transition: all .3s ease
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				border-bottom: 4px solid transparent
+			&.active
+				color: $green
+				&:before
+					border-color: $green
+			
+	&__box
+		margin: 0 -13px
+		justify-content: center
 .person
 	text-align: center
 	&__img
@@ -602,7 +813,6 @@ ul
 			pointer-events: none
 			transition: all .3s ease
 		&--active
-			padding-bottom: 18px
 			&:after
 				transform: rotate(180deg)
 	&__answer
@@ -670,9 +880,7 @@ ul
 		&.slick-initialized
 			padding-right: 0
 	&__arrow
-		margin-left: 14px
-
-	
+		margin-left: 14px	
 .doc-card
 	display: flex
 	margin: 0 10px 20px
