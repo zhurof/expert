@@ -10,6 +10,17 @@
 			color: #fff
 			&:before
 				color: inherit
+	.doc-card
+		&__pic
+			transition: all .3s ease
+			&:before,
+			&:after
+				transition: inherit
+		&:hover &__pic
+			&:before
+				background-color: transparentize($green,.3)
+			&:after
+				color: #fff
 @media(max-width:1199px)
 	.wrapper
 		max-width: 992px
