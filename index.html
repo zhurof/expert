@@ -14,22 +14,25 @@
 	<header class="header">
 		<a href="/" class="logo header__logo"><img src="img/logo.png" alt=""></a>
 		<a href="tel:+79211234567" class="header__phone header__phone--mobile">+7 921 123-45-67</a>
-		<ul class="header__menu">
-			<li><a href="#">Услуги</a></li>
-			<li><a href="#">Команда</a></li>
-			<li><a href="#">Документы</a></li>
-			<li><a href="#">Отзывы</a></li>  
-			<li><a href="#">Контакты</a></li>
-		</ul>
-		<div class="header__contacts">
-			<a href="tel:+79211234567" class="header__phone">+7 921 123-45-67</a>
-			<div class="header__status">Сейчас работаем</div>
-			<a href="#" class="btn btn--small">Обратный звонок</a>
-		</div>
-		<div class="header__auth">
-			<i class="far fa-door-open header__auth-icon"></i>
-			<h3 class="header__auth-title">Личный кабинет</h3>
-			<a href="#">Получить логин и пароль</a>
+		<span class="menu-btn"></span>
+		<div class="header__menu">
+			<ul class="header__nav">
+				<li><a href="#services">Услуги</a></li>
+				<li><a href="#team">Команда</a></li>
+				<li><a href="#docs">Документы</a></li>
+				<li><a href="#reviews">Отзывы</a></li>  
+				<li><a href="#contacts">Контакты</a></li>
+			</ul>
+			<div class="header__contacts">
+				<a href="tel:+79211234567" class="header__phone">+7 921 123-45-67</a>
+				<div class="header__status">Сейчас работаем</div>
+				<a href="#callback" class="btn btn--small modal-link">Обратный звонок</a>
+			</div>
+			<div class="header__auth">
+				<i class="far fa-door-open header__auth-icon"></i>
+				<h3 class="header__auth-title">Личный кабинет</h3>
+				<a href="#">Получить логин и пароль</a>
+			</div>
 		</div>
 	</header>
 	<main>		
@@ -43,7 +46,7 @@
 					</ul>
 				</div>
 				<div class="top-block__footer">
-					<a href="#" class="btn top-block__btn">Получить бесплатную консультацию</a>
+					<a href="#callback" class="btn top-block__btn modal-link">Получить бесплатную консультацию</a>
 					<p><i class="far fa-lg fa-bell" style="color:#DFC66D">&nbsp;</i> Это займет не больше 5-ти минут</p>
 				</div>
 				<a href="#" class="link-banner top-block__banner">
@@ -52,14 +55,14 @@
 				</a>
 			</div>
 		</div>
-		<div class="services">
+		<div class="services page-section" id="services">
 			<div class="wrapper">
 				<div class="services__head">
 					<h2 style="text-align:center;"><b>Наши услуги</b></h2>
 				</div>
 				<div class="box services__box">					
 					<div class="service-card">
-						<a href="#" class="service-card__link"></a>
+						<a href="#service" class="service-card__link modal-link"></a>
 						<img src="img/clipboard.png" alt="" class="service-card__img">
 						<div class="service-card__text">
 							<div class="service-card__content">
@@ -70,7 +73,7 @@
 						</div>
 					</div>
 					<div class="service-card">
-						<a href="#" class="service-card__link"></a>
+						<a href="#service" class="service-card__link modal-link"></a>
 						<img src="img/device.png" alt="" class="service-card__img">
 						<div class="service-card__text">
 							<div class="service-card__content">
@@ -174,12 +177,12 @@
 					</div>
 					<div class="info-card">
 						<h4><strong>Узнать стоимость <br>и сроки для своего проекта</strong></h4>
-						<a href="#" class="btn info-card__btn">получить ответ</a>
+						<a href="#ask" class="btn info-card__btn modal-link">получить ответ</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="team">
+		<div class="team page-section" id="team">
 			<div class="wrapper">
 				<div class="team__inner">
 					<div class="team__head">
@@ -201,7 +204,7 @@
 									<h5>Направление деятельности</h5>
 									<p><strong>6. Объемно-планировочные и архитектурные решения</strong></p>
 								</div>
-								<a href="#" class="btn btn--thin btn--envelope btn--block person-card__btn">Написать специалисту</a>
+								<a href="#ask" class="btn btn--thin btn--envelope btn--block person-card__btn modal-link">Написать специалисту</a>
 							</div>
 						</div>
 						<div class="person-card person-card--with-img" data-category="0" style="display:none;">
@@ -215,7 +218,7 @@
 									<h5>Направление деятельности</h5>
 									<p><strong>6. Объемно-планировочные и архитектурные решения</strong></p>
 								</div>
-								<a href="#" class="btn btn--thin btn--envelope btn--block person-card__btn">Написать специалисту</a>
+								<a href="#ask" class="btn btn--thin btn--envelope btn--block person-card__btn modal-link">Написать специалисту</a>
 							</div>
 							<img src="img/employee.jpg" alt="" class="person-card__img">
 						</div>
@@ -230,7 +233,7 @@
 									<h5>Направление деятельности</h5>
 									<p><strong>6. Объемно-планировочные и архитектурные решения</strong></p>
 								</div>
-								<a href="#" class="btn btn--thin btn--envelope btn--block person-card__btn">Написать специалисту</a>
+								<a href="#ask" class="btn btn--thin btn--envelope btn--block person-card__btn modal-link">Написать специалисту</a>
 							</div>
 						</div>
 						<div class="person-card" data-category="1">
@@ -258,7 +261,7 @@
 										<p><strong>7. Проверка табов в карточках сотрудников</strong></p>
 									</div>
 								</div>
-								<a href="#" class="btn btn--thin btn--envelope btn--block person-card__btn">Написать специалисту</a>
+								<a href="#ask" class="btn btn--thin btn--envelope btn--block person-card__btn modal-link">Написать специалисту</a>
 							</div>
 						</div>
 						<div class="person-card" data-category="1">
@@ -272,7 +275,7 @@
 									<h5>Направление деятельности</h5>
 									<p><strong>6. Объемно-планировочные и архитектурные решения</strong></p>
 								</div>
-								<a href="#" class="btn btn--thin btn--envelope btn--block person-card__btn">Написать специалисту</a>
+								<a href="#ask" class="btn btn--thin btn--envelope btn--block person-card__btn modal-link">Написать специалисту</a>
 							</div>
 						</div>
 						<div class="person-card person-card--with-img" data-category="1">
@@ -286,7 +289,7 @@
 									<h5>Направление деятельности</h5>
 									<p><strong>6. Объемно-планировочные и архитектурные решения</strong></p>
 								</div>
-								<a href="#" class="btn btn--thin btn--envelope btn--block person-card__btn">Написать специалисту</a>
+								<a href="#ask" class="btn btn--thin btn--envelope btn--block person-card__btn modal-link">Написать специалисту</a>
 							</div>
 							<img src="img/employee.jpg" alt="" class="person-card__img">
 						</div>						
@@ -344,12 +347,12 @@
 					<div class="person__text">
 						<h4>Остались вопросы?</h4>
 						<p>Позвоните нам <br><a href="tel:+74732023239" style="color:inherit">+7 (473) 202 32 39</a></p>
-						<a href="#" class="btn btn--thin btn--question person__btn">задать вопрос</a>
+						<a href="#ask" class="btn btn--thin btn--question person__btn modal-link">задать вопрос</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="reviews">
+		<div class="reviews page-section" id="reviews">
 			<div class="wrapper">
 				<div class="reviews__head">
 					<div class="reviews__text">
@@ -427,7 +430,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="docs">
+		<div class="docs page-section" id="docs">
 			<div class="wrapper docs__wrapper">
 				<div class="docs__inner">
 					<div class="docs__head">
@@ -535,8 +538,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="contacts">
-			<div class="contacts__map" id="map" data-coords="59.959197,30.314557" data-center="59.959197,30.310557"></div>
+		<div class="contacts page-section" id="contacts">			
 			<div class="wrapper contacts__wrapper">
 				<div class="contacts__text">
 					<h2 class="contacts__title">Контакты</h2>
@@ -569,9 +571,10 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="btn contacts__btn">Задать вопрос</a>
+					<a href="#ask" class="btn contacts__btn modal-link">Задать вопрос</a>
 				</div>
 			</div>
+			<div class="contacts__map" id="map" data-coords="51.707780, 39.179087"></div>
 		</div>
 		<div class="advantages">
 			<div class="wrapper advantages__wrapper">
@@ -621,12 +624,98 @@
 	<footer class="footer">
 		<div class="wrapper footer__wrapper">
 			<a href="tel:+79211234556" class="footer__phone">+7 921 123-45-56</a>
-			<a href="#" class="btn btn--thin footer__btn">Обратный звонок</a>
+			<a href="#callback" class="btn btn--thin footer__btn modal-link">Обратный звонок</a>
 			<div class="footer__text">
 				<p>© 2020 ЭкспертПроект <a href="#">Политика конфиденциальности</a>, <br>ИНН 123123123, ОГРН 12312983981273</p>
 			</div>
 		</div>
 	</footer>
+	<div class="modal" id="callback">
+		<form action="" class="form">
+			<div class="form__text">
+				<h3>Обратный звонок</h3>
+				<p>Наш менеджер перезвонит вам <br>в ближайшее время</p>
+			</div>
+			<label class="field">
+				<input type="tel" class="field__input">
+				<span class="field__placeholder">Номер телефона</span>
+			</label>
+			<button class="btn form__btn">Отправить заявку</button>
+			<div class="form__note">Отправляя форму вы соглашаетесь с политикой конфиденциальности</div>
+		</form>
+	</div>
+	<div class="modal" id="ask">
+		<form action="" class="form">
+			<div class="form__text">
+				<h3>Задать вопрос</h3>
+				<p>Мы свяжемся с вами и ответим <br>на все ваши вопросы</p>
+			</div>
+			<label class="field">
+				<input type="email" class="field__input">
+				<span class="field__placeholder">Эл. почта</span>
+			</label>
+			<label class="field">
+				<input type="tel" class="field__input">
+				<span class="field__placeholder">Номер телефона</span>
+			</label>
+			<label class="field">
+				<textarea rows="7" class="field__input"></textarea>
+				<span class="field__placeholder">Вопрос</span>
+			</label>
+			<button class="btn form__btn">Отправить заявку</button>
+			<div class="form__note">Отправляя форму вы соглашаетесь с политикой конфиденциальности</div>
+		</form>
+	</div>
+	<div class="modal" id="service">
+		<div class="service">
+			<article class="service__text">
+				<h2><b>Негосударственная</b> экспертиза проектной документации</h2>
+				<h3>Для чего она нужна?</h3>
+				<p>Экспертиза нужна для получения разрешения на строительство. Государственные органы требуют ее перед тем как согласовать проект, чтобы убедиться в квалификации подрядчика. Экспертиза дает возможность найти и устранить нарушения до того, как начнется строительтво.</p>
+				<h3>Что будет сделано?</h3>
+				<p>Мы проанализируем документы и проверим их на соответствие </p>
+				<ul>
+					<li>санитарно-эпидемиологическим и экологическим требованиям, </li>
+					<li>всем действующим нормативным актам,</li> 
+					<li>результатам инженерных изысканий, </li>
+					<li>государственным стандартам, </li>
+					<li>градостроительным планам и требованиям государственной охраны объектов культурного наследия,</li> 
+					<li>требованиям пожарной, промышленной и иных видах безопасности</li>
+				</ul>
+				<h3>Какие документы потребуются?</h3>
+				<p>Все документы можно загрузить через личный кабинет и подписать с помощью «электронной подписи». Не нужно приезжать в офис или отправлять копии документов по почте.</p>
+				<p>По постановлению Правительства РФ от 05.03.2007 N 145 <br>для работы нам понадобятся:</p>
+				<ul>
+					<li><strong>заявление</strong> о проведении негосударственной экспертизы;</li>
+					<li>задание <strong>на проектирование</strong>;</li>
+					<li>задание <strong>на выполнение инженерных изысканий</strong>;</li>
+					<li><strong>проектная документация</strong> на объект капитального строительства в соответствии с требованиями (в том числе к составу и содержанию разделов документации), установленными законодательством Российской Федерации.</li>
+					<li>результаты <strong>инженерных изысканий</strong> в соответствии с требованиями (в том числе к составу указанных результатов), установленными законодательством Российской Федерации;</li>
+					<li>документы, подтверждающие <strong>полномочия заявителя</strong> действовать от имени застройщика, технического заказчика (в случае, если заявитель не является техническим заказчиком, застройщиком)</li>
+					<li>документ, подтверждающий <strong>передачу проектной документации</strong> и (или) результатов инженерных изысканий застройщику (техническому заказчику);</li>
+					<li><strong>выписка из реестра</strong> членов саморегулируемой организации в области архитектурно-строительного проектирования и (или) инженерных изысканий, членом которой является исполнитель работ по подготовке проектной документации и (или) выполнению инженерных изысканий, действительная на дату передачи проектной документации и (или) результатов инженерных изысканий застройщику (техническому заказчику) </li>
+				</ul>
+				<h5>(представляется в случае, если в соответствии с законодательством Российской Федерации требуется членство исполнителя работ по подготовке проектной документации и (или) выполнению инженерных изысканий в саморегулируемой организации в области архитектурно-строительного проектирования и (или) в области инженерных изысканий.)</h5>
+			</article>
+			<form action="" class="form service__form">
+				<div class="form__text">
+					<h3>Начать работать</h3>
+					<p>Мы свяжемся с вами и отправим на почту все необходимые для начала работы данные</p>
+				</div>
+				<label class="field">
+					<input type="email" class="field__input">
+					<span class="field__placeholder">Эл. почта</span>
+				</label>
+				<label class="field">
+					<input type="tel" class="field__input">
+					<span class="field__placeholder">Номер телефона</span>
+				</label>
+				<button class="btn form__btn">Отправить заявку</button>
+				<div class="form__note">Отправляя форму вы соглашаетесь с политикой конфиденциальности</div>
+			</form>
+		</div>
+	</div>
+	<script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&#038;ver=1'></script>
 	<script src="libs/jquery/jquery-3.4.1.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/magnific/magnific-popup.min.js"></script>

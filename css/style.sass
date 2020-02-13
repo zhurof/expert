@@ -36,9 +36,10 @@ html
 
 body
 	margin: 0
-	padding: 0 0 0 152px
+	padding: 0 0 0 151px
 	min-height: 100vh
 	min-height: var(--w-height)
+	min-width: 320px
 	font: normal normal 16px/1.3125 Ubuntu, sans-serif
 	color: $text
 img,
@@ -92,11 +93,30 @@ blockquote
 /*элементы форм*/
 input,textarea,button,select
 	font: inherit
-	color: inherit	
-	
+	color: inherit		
 textarea
 	resize: none
 	overflow: auto
+[type=text],
+[type=email],
+[type=tel],
+[type=password],
+[type=url],
+textarea
+	display: block
+	width: 100%
+	border: none
+	border-radius: 10px
+	background-color: #F7F7F7
+	padding: 22px 20px
+	font-size: 16px
+	line-height: 21/16*1
+	color: #282828
+	box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.0986943)
+	margin: 0 0 20px
+	min-width: 0
+	&:last-child
+		margin-bottom: 0
 	
 //select
 	appearance: none
@@ -117,43 +137,42 @@ textarea
 	&::-webkit-outer-spin-button,
 	&::-webkit-inner-spin-button
 		appearance: none
-		margin: 0
-		
+		margin: 0		
 .field
 	display: block
 	position: relative
 	user-select: none
-	text-align: left
-	margin: 0 0 15px
+	margin: 0 0 20px
+	color: #282828
 	&:last-child
 		margin-bottom: 0
-	&__input,
-	&__select
+	&__input
 		margin: 0
+		text-align: left
 	&__placeholder
 		font-size: 16px
-		color: #000
-		line-height: normal
+		line-height: 21/16*1
+		font-weight: bold
 		white-space: nowrap
 		overflow: hidden
 		text-overflow: ellipsis
 		position: absolute
-		top: 21px
-		left: 25px
-		width: calc(100% - 50px)
-		transition: all .2s ease
+		top: 23px
+		/*горожу такой колхоз, т.к. text-align не анимируется*/
+		left: 50%
+		transform: translateX(-50%)
+		text-align: left		
+		max-width: 100%
+		padding: 0 20px
 		pointer-events: none
+		transition: all .2s ease
 	&__input:focus + &__placeholder,
 	&--fill &__placeholder
-		font-size: 11px
-		top: 4px
-	&__description
-		display: block
-		font-size: 14px
-		line-height: normal
-		color: #ADADAD
-		padding: 4px 25px
-		
+		font-size: 12px
+		line-height: 21/12*1
+		top: 0
+		left: 0
+		transform: none
 /*кнопки*/
 button,
 [type=submit],
@@ -167,6 +186,7 @@ button,
 	background: linear-gradient(180deg, #E2CA71 0%, #C6A238 100%)
 	font: normal 500 16px/1.5 Ubuntu, sans-serif
 	padding: 24px 50px
+	border: none
 	color: #fff
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.246449)
 	text-transform: uppercase
@@ -256,10 +276,13 @@ h4
 	&:last-child
 		margin-bottom: 0
 h5
-	font-size: 12px
-	line-height: 21/12*1
+	color: #6a6a6a
+	font-size: 13px
+	line-height: 18/13*1
 	font-weight: inherit
-	margin: 0
+	margin: 0 0 1em
+	&:last-child
+		margin-bottom: 0
 
 /*списки*/
 ul,ol
@@ -297,6 +320,14 @@ ul
 	line-height: 46px
 	font-size: 26px
 	cursor: pointer
+/*модальные окна*/
+.modal
+	display: none
+	.mfp-content &
+		display: block
+.mfp-inline-holder .mfp-content
+	width: auto
+	max-width: 100%
 
 /*ОСНОВНОЕ СОДЕРЖИМОЕ*/
 .logo
@@ -304,11 +335,13 @@ ul
 	img
 		display: block
 		width: 100%
+.menu-btn
+	display: none
 .header
 	position: fixed
 	top: 0
 	left: 0
-	width: 152px
+	width: 151px
 	height: 100%
 	display: flex
 	flex-direction: column
@@ -320,12 +353,18 @@ ul
 		border-bottom: 1px solid rgba(0,0,0,.1)
 		flex: 0 0 auto
 	&__menu
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+	&__nav
 		+unlist
 		font: normal bold 18px/1.25 Oswald,sans-serif
 		padding: 10px 0
 		border-bottom: 1px solid rgba(0,0,0,.1)
 		flex: 1 1 auto
 		>li
+			&.active
+				color: $green
 			>a
 				display: block
 				color: inherit
@@ -483,7 +522,7 @@ ul
 	&__img
 		margin: 0 17px 0 0
 .service-card
-	width: calc(50% - 20px)
+	flex-basis: calc(50% - 20px)
 	margin: 0 10px 20px
 	display: flex
 	align-items: flex-start
@@ -509,14 +548,15 @@ ul
 		position: relative
 		z-index: 1
 		line-height: 24/16*1
+		margin: 0 0 37px
+		&:last-child
+			margin-bottom: 0
 	&__pseudo-link
-		display: inline-block
 		vertical-align: top
 		color: $green
 		text-transform: uppercase
-		border-bottom: 1px dashed
+		border-bottom: 1px dashed transparentize($green,.5)
 		pointer-events: none
-		margin: 37px 0 0
 		font-family: Oswald
 		font-weight: 400
 		letter-spacing: .7/16*1em
@@ -548,7 +588,7 @@ ul
 	margin: 0 7px 14px
 	background-color: rgba(255,255,255,.25)
 	position: relative
-	width: 352px
+	flex-basis: 352px
 	padding: 27px 16px 29px 136px
 	border-radius: 5px
 	&--right-image
@@ -556,7 +596,7 @@ ul
 		padding-right: 112px
 	&__img
 		position: absolute
-		right: 215px
+		right: calc(100% - 137px)
 		top: 50%
 		pointer-events: none
 		transform: translateY(-50%)
@@ -566,9 +606,10 @@ ul
 			transform: none
 		&--right
 			right: auto
-			left: 197px
+			left: calc(100% - 155px)
+			
 		&--right-bottom
-			left: 195px
+			left: calc(100% - 157px)
 			right: auto
 			top: auto
 			bottom: -32px
@@ -588,7 +629,7 @@ ul
 	margin: 0 7px 14px
 	background-color: rgba(255,255,255,.25)
 	position: relative
-	width: 352px
+	flex-basis: 352px
 	padding: 55px 16px 40px
 	border-radius: 5px
 	text-align: center
@@ -608,6 +649,7 @@ ul
 	color: #fff
 	padding: 55px 0
 	margin: 0 0 80px
+	overflow: hidden
 	&:last-child
 		margin-bottom: 0
 	&__head
@@ -636,7 +678,9 @@ ul
 		display: flex
 		flex-direction: column
 		h5
-			color: #6a6a6a
+			font-size: 12px
+			line-height: 21/12*1
+			margin: 0
 		p
 			margin: 0 0 5/16*1em
 			&:last-child
@@ -711,9 +755,11 @@ ul
 		justify-content: center
 .person
 	text-align: center
+	width: 430px
+	max-width: 100%	
 	&__img
 		display: block
-		width: 100%
+		margin: 0 auto
 	&__text
 		max-width: 282px
 		margin: -30px auto 0
@@ -888,7 +934,7 @@ ul
 	border-radius: 5px
 	overflow: hidden
 	background-color: #fff
-	width: calc(50% - 20px)
+	flex-basis: calc(50% - 20px)
 	box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.0676901)
 	&__link
 		+pos
@@ -990,6 +1036,7 @@ ul
 	&__wrapper
 		position: relative
 		z-index: 1
+		pointer-events: none
 	&__text
 		background-color: #fff
 		border-radius: 5px
@@ -998,6 +1045,7 @@ ul
 		max-width: 100%
 		position: relative
 		padding: 34px 40px 50px
+		pointer-events: auto
 		&:after
 			content: ''
 			display: block
@@ -1059,6 +1107,54 @@ ul
 				top: 50%
 				left: 50%
 				transform: translate(-50%,-50%)
+.form
+	width: 427px
+	max-width: 100%
+	background-color: #fff
+	text-align: center
+	padding: 50px 40px 60px
+	color: #282828
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0843805)
+	border-radius: 5px
+	position: relative
+	margin-bottom: 13px
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: calc(100% - 36px)
+		height: 13px
+		left: 18px
+		top: 100%
+		border-radius: 0 0 5px 5px
+		background-color: #F9F9F9
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0843805)
+	&__text
+		margin: 0 0 37px
+		&:last-child
+			margin-bottom: 0
+	&__btn
+		margin: 10px 0 25px
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+	&__note
+		color: #6a6a6a
+		font-size: 14px
+		line-height: 17/14*1
+.service
+	width: 1237px
+	max-width: 100%
+	display: flex
+	align-items: flex-start
+	padding: 80px 70px 70px 120px
+	background: url(../img/clipboard.png) no-repeat -34px 63px/128px auto #F9F9F9
+	&__text
+		flex: 1 1 auto
+		padding-right: 45px
+	&__form
+		flex: 0 0 auto
 .footer
 	background-color: #353535
 	color: #fff
