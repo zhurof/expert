@@ -1704,13 +1704,25 @@ ul > li:last-child {
   .btn:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-144.43%, #E2CA71), color-stop(38.55%, #C6A238));
     background: linear-gradient(180deg, #E2CA71 -144.43%, #C6A238 38.55%);
+    -webkit-box-shadow: 0px 2px 0px #967B12;
+            box-shadow: 0px 2px 0px #967B12;
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
   }
   .btn--small:hover {
     background: #3D9349;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: none;
+            transform: none;
   }
   .btn--thin:hover {
     background: #4D9757;
     color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: none;
+            transform: none;
   }
   .btn--thin:hover:before {
     color: inherit;
@@ -1872,15 +1884,11 @@ ul > li:last-child {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     opacity: 0;
     pointer-events: none;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
   }
   .header__menu--open {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
     pointer-events: auto;
   }
   .header__nav {
@@ -2072,9 +2080,6 @@ ul > li:last-child {
   .person-card {
     margin-bottom: 26px;
   }
-  .person-card__img {
-    display: none;
-  }
 
   .faq {
     background: url(../img/green-circle.svg) no-repeat right -77px bottom -77px #F9F9F9;
@@ -2207,6 +2212,20 @@ ul > li:last-child {
     display: block;
   }
 
+  .person-card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .person-card__main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .person-card__img {
+    max-width: 33.33%;
+  }
+
   .faq__question {
     padding-right: 45px;
   }
@@ -2297,6 +2316,26 @@ ul > li:last-child {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     bottom: auto;
+  }
+
+  .person-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .person-card__img {
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    max-height: 450px;
+    -o-object-position: center top;
+       object-position: center top;
+  }
+  .person-card__main {
+    width: auto;
   }
 
   .team {
