@@ -577,7 +577,7 @@ ul > li:last-child {
   padding-left: 90px;
   font-size: 20px;
   line-height: 1.3;
-  margin: 0 0 77px;
+  margin: 0 0 76px;
 }
 .top-block__text:last-child {
   margin-bottom: 0;
@@ -1698,16 +1698,16 @@ ul > li:last-child {
 /*АДАПТИВ */
 @media(min-width: 992px) {
   .btn {
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
   }
   .btn:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-144.43%, #E2CA71), color-stop(38.55%, #C6A238));
     background: linear-gradient(180deg, #E2CA71 -144.43%, #C6A238 38.55%);
-    -webkit-box-shadow: 0px 2px 0px #967B12;
-            box-shadow: 0px 2px 0px #967B12;
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px);
+    -webkit-box-shadow: 0px 1px 0px #967B12;
+            box-shadow: 0px 1px 0px #967B12;
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
   }
   .btn--small:hover {
     background: #3D9349;
